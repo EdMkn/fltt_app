@@ -1,4 +1,4 @@
-import 'package:email_validator/email_validator.dart';
+//import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'main.dart';
@@ -12,7 +12,8 @@ class Page6 extends StatelessWidget {
   bool valide = false;
 
   void Validate(String email) {
-    bool isvalid = EmailValidator.validate(email);
+    //bool isvalid = EmailValidator.validate(email);
+    bool isvalid = true;
     print(isvalid);
     if (isvalid) {
       valide = true;
@@ -23,13 +24,13 @@ class Page6 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:
-          Color.alphaBlend(Color(0xffa6ec55), Colors.lightGreenAccent),
+          Color.alphaBlend(Color(0xc137b1b1), Colors.lightGreenAccent),
       body: Center(
         child: Column(
           children: <Widget>[
             Align(
                 alignment: Alignment.topRight,
-                child: Image.asset("assets/images/LOGO4.png", height: 45)),
+                child: Image.asset("assets/images/logo.png", height: 45)),
             Row(
               children: [
                 SizedBox(
@@ -101,7 +102,7 @@ class Page6 extends StatelessWidget {
                 },
                 child: Text('Envoyé'),
                 style: ElevatedButton.styleFrom(
-                    shape: StadiumBorder(), primary: Color(0xe2ff1e00)),
+                    shape: StadiumBorder(), primary: Color(0xff09060f)),
               ),
             ),
           ],

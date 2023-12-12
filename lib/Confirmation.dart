@@ -11,7 +11,7 @@ class Page5 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:
-          Color.alphaBlend(Color(0xffa6ec55), Colors.lightGreenAccent),
+          Color.alphaBlend(Color(0xc137b1b1), Colors.lightGreenAccent),
       body: Center(
         child: Column(
           children: <Widget>[
@@ -51,7 +51,7 @@ class Page5 extends StatelessWidget {
                 },
                 child: Text('Retour'),
                 style: ElevatedButton.styleFrom(
-                    shape: StadiumBorder(), primary: Color(0xe2ff1e00)),
+                    shape: StadiumBorder(), primary: Color(0xff09060f)),
               ),
             ),
           ],

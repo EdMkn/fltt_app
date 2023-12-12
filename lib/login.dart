@@ -3,6 +3,7 @@ import 'dart:async';
 import 'main.dart';
 import 'create_account.dart';
 import 'password.dart';
+import 'space.dart';
 
 class Login extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -10,13 +11,13 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:
-          Color.alphaBlend(const Color(0xffa6ec55), Colors.lightGreenAccent),
+          Color.alphaBlend(const Color(0xc137b1b1), Colors.lightGreenAccent),
       body: Center(
         child: Column(
           children: <Widget>[
             Align(
                 alignment: Alignment.topRight,
-                child: Image.asset("assets/images/LOGO4.png", height: 45)),
+                child: Image.asset("assets/images/logo.png", height: 45)),
 
             const Text(
               "Connexion",
@@ -59,10 +60,15 @@ class Login extends StatelessWidget {
               height: 35,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (BuildContext context) {
+                  return Space();
+                }));
+              },
               child: Text('Se Connecter'),
               style: ElevatedButton.styleFrom(
-                  shape: StadiumBorder(), primary: Colors.red),
+                  shape: StadiumBorder(), primary: Color(0xff09060f)),
             ),
             SizedBox(
               //Use of SizedBox
@@ -77,7 +83,7 @@ class Login extends StatelessWidget {
               },
               child: Text('Mot de passe oublié'),
               style: ElevatedButton.styleFrom(
-                  shape: StadiumBorder(), primary: Colors.red),
+                  shape: StadiumBorder(), primary: Color(0xff09060f)),
             ),
             SizedBox(
               //Use of SizedBox
@@ -94,7 +100,7 @@ class Login extends StatelessWidget {
                   },
                   child: Text('Créer un compte'),
                   style: ElevatedButton.styleFrom(
-                      shape: StadiumBorder(), primary: Colors.red),
+                      shape: StadiumBorder(), primary: Color(0xff09060f)),
                 )),
             SizedBox(
               //Use of SizedBox

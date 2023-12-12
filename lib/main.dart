@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'login.dart';
+import 'package:testapp/create_account.dart';
+import 'package:testapp/Confirmation.dart';
+import 'password.dart';
+import 'space.dart';
 
-void main() async => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   //const MyApp({super.key});
@@ -26,10 +33,11 @@ class MyApp extends StatelessWidget {
       // A widget which will be started on application startup
       routes: {
         '/': (context) => const MyHomePage(title: 'MitL'),
-        //'/inscription': (context) => Page3(),
-        //'/connexion': (context) => Login(),
-        //'/confirmation':((context) => Page5()),
-        //'/passeport': (context) => Page6(),
+        '/inscription': (context) => Page3(),
+        '/connexion': (context) => Login(),
+        '/confirmation': ((context) => Page5()),
+        '/motdpasse': (context) => Page6(),
+        '/espace': (context) => Space()
       },
       initialRoute: '/',
     );
@@ -48,7 +56,7 @@ class MyHomePage extends StatelessWidget {
     });
     return Scaffold(
       backgroundColor:
-          Color.alphaBlend(const Color(0xffa6ec55), Colors.lightGreenAccent),
+          Color.alphaBlend(const Color(0xc137b1b1), Colors.lightGreenAccent),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
