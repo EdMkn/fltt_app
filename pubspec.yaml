@@ -9,6 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  dropdown_button2: ^2.3.9
+  dropdown_formfield: ^0.1.4
+  toggle_switch: ^2.1.0
+  email_validator: '^2.1.17'
 
 dev_dependencies:
   flutter_test:
